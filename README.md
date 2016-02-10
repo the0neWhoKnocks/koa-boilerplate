@@ -1,4 +1,4 @@
-# A boilerplate Node server
+# A boilerplate Koa Node server
 
 This boiler plate utilizes Koa instead of the standard Express.
 
@@ -25,7 +25,7 @@ Tried **Forever** as well, but it wasn't displaying any of the output of the app
 
 ---
 
-## Testing Endpoints
+## Testing API Endpoints
 
 * **<GET>** `curl -i "http://localhost:3000/api/v1/user/get?uid=2"`
 * **<POST>** `curl -i "http://localhost:3000/api/v1/user/save" -d "uid=2&data=blah"`

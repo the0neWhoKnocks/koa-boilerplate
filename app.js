@@ -1,6 +1,7 @@
 // module includes
 var koa = require('koa');
 var hbs = require('koa-hbs');
+var vhost = require('koa-vhost');
 var router = require('koa-router')();
 var koaBody = require('koa-body');
 var serve = require('koa-static');
@@ -17,6 +18,7 @@ var nopt = require('nopt');
 
 
 var app = koa();
+var testServer = koa();
 var app_root = __dirname;
 var logger = new (require('./server/Logger.js'))();
 var conf = {
@@ -106,6 +108,15 @@ function startApp(){
 
 app.use( koaBody( {formidable:{uploadDir: app_root}} ) ); // request body parser
 app.use(router.routes()).use(router.allowedMethods());
+
+// == vhost ====================================================================
+
+app.use(vhost({
+  host: conf.domain,
+  app: app
+}));
+
+// == port =====================================================================
 
 /**
  * Ideally the app will run on port 80 so it's one less thing to type in.

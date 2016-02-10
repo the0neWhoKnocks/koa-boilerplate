@@ -93,10 +93,13 @@ class Logger {
 
   appLocation(portText, domain){
     console.log(
-      this.style.success('[ START ]') +' Running at localhost'+ this.style.success('%s') +' OR http://%s'+ this.style.success('%s'),
-      portText,
-      domain,
-      portText
+      this.style.success('[ START ]') +' Server running at '+ this.style.success('%s') +' OR '+ this.style.success('%s'),
+      'localhost'+portText,
+      'http://'+domain+portText
+    );
+    console.log(
+      this.style.debug('[ NOTE ] Add `127.0.0.1  %s` to your `hosts` file'),
+      domain
     );
   }
 

@@ -28,6 +28,7 @@
     "koa-rewrite": "^1.1.1",
     "koa-router": "^5.3.0",
     "koa-static": "^2.0.0",
+    "koa-vhost": "^0.5.0",
     "lodash": "^4.3.0",
     "portscanner": "^1.0.0",
     "webpack": "^1.12.13"

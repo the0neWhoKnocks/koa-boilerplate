@@ -24,6 +24,13 @@ module.exports = function(opts){
       : `Got data for user with id: "${reqData.uid}"`;
   }
   
+// == Pages ====================================================================
+
+  function *root(next){
+    this.body = "It works!";
+  };
+  router.get('/', root);
+  
 // == API ======================================================================
 
   function *testEndpoint(next){
