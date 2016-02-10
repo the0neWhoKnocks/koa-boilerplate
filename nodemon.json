@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "execMap": {
+    "js": "node"
+  },
+  "args": ["--harmony"],
+  "watch": [
+    "./app.js",
+    "./server/"
+  ],
+  "ext": "js",
+  "legacyWatch": true
+}

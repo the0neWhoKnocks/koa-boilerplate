@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="{{IMG_PATH}}/favicon.ico"/>
+
+  <title>{{head.title}}</title>
+
+{{#each head.css}}
+  <link rel="stylesheet" href="{{this}}.css" />
+{{/each}}
+{{#each head.js}}
+  <script src="{{this}}.js"></script>
+{{/each}}
+</head>
+
+<body role="document"{{{page.attributes}}}>
+{{! body is the template passed in via the render method}}
+  {{{body}}}
+</body>
+</html>
